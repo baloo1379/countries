@@ -1,0 +1,11 @@
+.Header {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  & div a:not(:last-child) {
+    margin-right: 12px;
+  }
+}

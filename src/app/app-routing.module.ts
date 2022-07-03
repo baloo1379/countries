@@ -1,7 +1,16 @@
+import { CountryComponent } from './pages/country/country.component';
+import { RegionComponent } from './pages/region/region.component';
+import { HomeComponent } from './pages/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RegionGuard } from './guards/region.service';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'region/:name', component: RegionComponent, canActivate: [RegionGuard]},
+  {path: 'country/:id', component: CountryComponent},
+  {path: '**', redirectTo: ''}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

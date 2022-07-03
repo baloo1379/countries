@@ -1,0 +1,28 @@
+.Box {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position-y: 180%;
+  background-position-x: 260%;
+}
+
+.bg-africa {
+  background-image: url('../../../assets/africa.png');
+}
+.bg-americas {
+  background-image: url('../../../assets/america.png');
+}
+.bg-asia {
+  background-image: url('../../../assets/asia.png');
+}
+.bg-europe {
+  background-image: url('../../../assets/europe.png');
+}
+.bg-oceania {
+  background-image: url('../../../assets/australia.png');
+}

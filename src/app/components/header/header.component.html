@@ -1,0 +1,6 @@
+<header class="Header d-flex flex-justify-between">
+  <div class="Header-item icon" [innerHTML]="icon"></div>
+  <div class="Header-item" *ngIf="showBackButton">
+    <a class="btn" type="button" routerLink="..">Wstecz</a>
+  </div>
+</header>
