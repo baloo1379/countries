@@ -3,7 +3,7 @@ import { NavigationEnd, Router, RouterEvent } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { NavigationService } from './navigation.service';
-import { of, Observable, ReplaySubject } from 'rxjs';
+import { ReplaySubject } from 'rxjs';
 
 describe('NavigationService', () => {
   let service: NavigationService;
