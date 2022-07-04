@@ -6,10 +6,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegionGuard } from './guards/region.service';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'region/:name', component: RegionComponent, canActivate: [RegionGuard]},
-  {path: 'country/:id', component: CountryComponent},
-  {path: '**', redirectTo: ''}
+  { path: '', component: HomeComponent },
+  { path: 'region/:name', children: [
+    { path: '', component: RegionComponent, pathMatch: 'full' },
+    { path: 'country/:id', component: CountryComponent}
+  ]},
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

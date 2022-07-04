@@ -1,4 +1,6 @@
-import { RegionPath } from './../../models/region.model';
+import { Observable } from 'rxjs';
+import { RegionService } from './../../services/region.service';
+import { Region, RegionPath } from './../../models/region.model';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,15 +9,17 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./region.component.scss']
 })
 export class RegionComponent implements OnInit {
-  region!: string;
+  regionName!: string;
+  region$!: Observable<Region[]>
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private regionService: RegionService) { }
 
   ngOnInit(): void {
-    const region: RegionPath = this.route.snapshot.paramMap.get('name') ?? '';
-    console.log({region});
-    this.region = region;
+    const regionName: RegionPath = this.route.snapshot.paramMap.get('name') ?? '';
+    console.log({regionName});
+    this.regionName = regionName;
 
+    this.region$ = this.regionService.getRegion(regionName);
   }
 
 }

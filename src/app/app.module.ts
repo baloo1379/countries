@@ -10,7 +10,8 @@ import { RegionComponent } from './pages/region/region.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import '@github/details-dialog-element';
-import { AboutComponent } from './components/about/about.component'
+import { AboutComponent } from './components/about/about.component';
+import { BackButtonDirective } from './directives/back-button.directive'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AboutComponent } from './components/about/about.component'
     RegionComponent,
     HeaderComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    BackButtonDirective
   ],
   imports: [
     BrowserModule,

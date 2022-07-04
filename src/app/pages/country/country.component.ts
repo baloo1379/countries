@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { RegionService } from 'src/app/services/region.service';
 
 @Component({
   templateUrl: './country.component.html',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CountryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private regionService: RegionService) { }
 
   ngOnInit(): void {
   }

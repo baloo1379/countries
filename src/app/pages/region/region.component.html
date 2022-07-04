@@ -1,14 +1,20 @@
-<h2>{{ region | titlecase }}</h2>
-<div>
+<h2 class="h1 mx-3">{{ regionName | titlecase }}</h2>
+<div class="mx-3">
   <nav aria-label="Breadcrumb">
     <ol>
       <li class="breadcrumb-item">
         <a routerLink="/">Regions</a>
       </li>
       <li class="breadcrumb-item breadcrumb-item-selected">
-        <a routerLink="." aria-current="page">{{ region | titlecase }}</a>
+        <a routerLink="." aria-current="page">{{ regionName | titlecase }}</a>
       </li>
     </ol>
   </nav>
+  <div class="d-flex flex-column flex-wrap flex-md-row flex-items-center flex-md-items-center">
+    <a class="Box col-12 col-md-6 p-4 d-flex flex-items-center" *ngFor="let country of region$ | async" routerLink="./country/{{country.cca3}}">
+      <img src="{{ country.flags.png }}" alt="{{ country.name.common }} flag" style="height: 48px;" class="mr-4">
+      <h3 class="h2">{{ country.name.common }}</h3>
+    </a>
+  </div>
 </div>
-<p>Lista państw w regionie</p>
+
