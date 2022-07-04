@@ -1,4 +1,4 @@
-import { map, Observable, of } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Region } from 'src/app/models/region.model';
