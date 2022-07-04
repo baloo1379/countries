@@ -1,0 +1,21 @@
+.List {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  @media (min-width: 768px) {
+    flex-flow: row wrap;
+  }
+}
+
+.Box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: calc(50% - 6px);
+  }
+}

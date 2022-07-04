@@ -1,6 +1,6 @@
 <div class="p-5">
   <h2 class="text-center">Choose region:</h2>
   <div class="mt-5 d-flex flex-justify-center flex-wrap">
-    <a class="Box mx-4 my-4 p-4 color-bg-subtle f3" [class]="'bg-'+region" *ngFor="let region of availableRegions" routerLink="/region/{{region}}">{{ region | titlecase }}</a>
+    <a class="Box color-shadow-medium mx-4 my-4 p-4 color-bg-subtle f3" [class]="'bg-'+region" *ngFor="let region of availableRegions" routerLink="/region/{{region}}">{{ region | titlecase }}</a>
   </div>
 </div>

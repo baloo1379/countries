@@ -1,6 +1,5 @@
-<h2 class="h1 mx-3">{{ regionName | titlecase }}</h2>
-<div class="mx-3">
-  <nav aria-label="Breadcrumb">
+<div class="my-3 px-3 px-md-0">
+  <nav aria-label="Breadcrumb" class="f2 my-2">
     <ol>
       <li class="breadcrumb-item">
         <a routerLink="/">Regions</a>
@@ -10,10 +9,10 @@
       </li>
     </ol>
   </nav>
-  <div class="d-flex flex-column flex-wrap flex-md-row flex-items-center flex-md-items-center">
-    <a class="Box col-12 col-md-6 p-4 d-flex flex-items-center" *ngFor="let country of region$ | async" routerLink="./country/{{country.cca3}}">
-      <img src="{{ country.flags.png }}" alt="{{ country.name.common }} flag" style="height: 48px;" class="mr-4">
-      <h3 class="h2">{{ country.name.common }}</h3>
+  <div class="List">
+    <a class="Box color-shadow-small p-4" *ngFor="let country of region$ | async" routerLink="./country/{{country.cca3}}">
+      <img src="{{ country.flags.png }}" alt="{{ country.name.common }} flag" style="height: 48px;" class="mr-4 color-shadow-medium">
+      <span class="h3">{{ country.name.common }}</span>
     </a>
   </div>
 </div>

@@ -16,7 +16,6 @@ export class RegionComponent implements OnInit {
 
   ngOnInit(): void {
     const regionName: RegionPath = this.route.snapshot.paramMap.get('name') ?? '';
-    console.log({regionName});
     this.regionName = regionName;
 
     this.region$ = this.regionService.getRegion(regionName);

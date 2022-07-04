@@ -1,1 +1,40 @@
-<p>Szczegóły państwa</p>
+<div class="my-3 px-3 px-md-0" *ngIf="(country$ | async) as country">
+  <nav aria-label="Breadcrumb" class="f2 my-2">
+    <ol>
+      <li class="breadcrumb-item">
+        <a routerLink="/">Regions</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a routerLink="/region/{{regionName}}">{{ regionName | titlecase }}</a>
+      </li>
+      <li class="breadcrumb-item breadcrumb-item-selected">
+        <a routerLink="." aria-current="page">{{ country.name.common }}</a>
+      </li>
+    </ol>
+  </nav>
+  <div class="Box">
+    <div class="Box-header d-flex flex-justify-between flex-items-center">
+      <div>
+        <h1 class="Box-title h1">
+          {{ country.name.common }}
+        </h1>
+        <p class="f3">
+          {{ country.name.official }}
+        </p>
+      </div>
+      <img src="{{ country.flags.png }}" alt="{{ country.name.common }} flag" style="height: 96px;" class="color-shadow-medium">
+    </div>
+    <div class="Box-body f4">
+      Capital: <strong>{{ country.capital }}</strong>
+    </div>
+    <div class="Box-body f4">
+      Currency:
+      <div *ngFor="let currency of country.currencies | keyvalue">
+        {{currency.key}}: <strong>{{ currency.value.name }}</strong> ({{ currency.value.symbol}})
+      </div>
+    </div>
+    <div class="Box-body f4">
+      Population: <strong>{{ country.population.toLocaleString() }}</strong>
+    </div>
+  </div>
+</div>
