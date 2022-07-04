@@ -38,7 +38,7 @@ export interface Region {
   continents:   RegionElement[];
   flags:        Images;
   coatOfArms:   Images;
-  startOfWeek:  StartOfWeek;
+  startOfWeek:  string;
   capitalInfo:  CapitalInfo;
   postalCode?:  PostalCode;
   borders?:     string[];
@@ -113,11 +113,4 @@ export interface PostalCode {
   regex:  string;
 }
 
-export enum StartOfWeek {
-  Monday = "monday",
-}
-
-export enum Status {
-  OfficiallyAssigned = "officially-assigned",
-  UserAssigned = "user-assigned",
-}
+export type Status = "officially-assigned" | "user-assigned"
