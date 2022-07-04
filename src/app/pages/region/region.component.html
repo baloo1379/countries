@@ -1,12 +1,14 @@
 <h2>{{ region | titlecase }}</h2>
-<nav aria-label="Breadcrumb" class="my-3">
-  <ol>
-    <li class="breadcrumb-item">
-      <a href="#" routerLink="/">Regions</a>
-    </li>
-    <li class="breadcrumb-item breadcrumb-item-selected">
-      <a href="#" routerLink="." aria-current="page">{{ region | titlecase }}</a>
-    </li>
-  </ol>
-</nav>
+<div>
+  <nav aria-label="Breadcrumb">
+    <ol>
+      <li class="breadcrumb-item">
+        <a routerLink="/">Regions</a>
+      </li>
+      <li class="breadcrumb-item breadcrumb-item-selected">
+        <a routerLink="." aria-current="page">{{ region | titlecase }}</a>
+      </li>
+    </ol>
+  </nav>
+</div>
 <p>Lista państw w regionie</p>

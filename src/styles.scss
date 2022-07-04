@@ -1,3 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "@primer/css/index.scss";
 @import "@primer/octicons/index.scss";
+@import "@github/details-dialog-element/dist/index.css";
+
+.breadcrumb-item {
+  margin-left: 0 !important;
+}

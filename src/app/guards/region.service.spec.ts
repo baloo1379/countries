@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RegionService } from './region.service';
+import { RegionGuard } from './region.service';
 
 describe('RegionService', () => {
-  let service: RegionService;
+  let service: RegionGuard;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(RegionService);
+    service = TestBed.inject(RegionGuard);
   });
 
   it('should be created', () => {
