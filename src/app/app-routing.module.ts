@@ -8,7 +8,7 @@ import { RegionGuard } from './guards/region.service';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'region/:name', children: [
-    { path: '', component: RegionComponent, pathMatch: 'full' },
+    { path: '', component: RegionComponent, pathMatch: 'full', canActivate: [RegionGuard] },
     { path: 'country/:id', component: CountryComponent}
   ]},
   { path: '**', redirectTo: '' }
