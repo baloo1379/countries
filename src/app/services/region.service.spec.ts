@@ -5,6 +5,8 @@ import { RegionService } from './region.service';
 import { Region } from '../models/region.model';
 
 describe('RegionService', () => {
+  const regionName = 'macedonia';
+  const countryCCA3 = 'MKD';
   let injector: TestBed;
   let service: RegionService;
   let httpMock: HttpTestingController;
@@ -29,7 +31,6 @@ describe('RegionService', () => {
 
   describe('#getRegion', () => {
     it('should return an Observable<Region[]>', () => {
-      const regionName = 'macedonia'
       const dummyRegions: Region[] = [
         {...macedonia}
       ];
@@ -47,8 +48,6 @@ describe('RegionService', () => {
 
   describe('#getCountry', () => {
     it('should return an Observable<Region>', () => {
-      const regionName = 'macedonia';
-      const countryCCA3 = 'MKD';
       const dummyRegions: Region[] = [
         macedonia
       ];
