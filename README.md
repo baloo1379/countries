@@ -28,4 +28,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Screenshots
 
-![Screenshot 1](/screenshot-1.png?raw=true "Home screen")
+![Screenshot 5](/screenshot-5.png?raw=true "Home screen light theme")
+![Screenshot 1](/screenshot-1.png?raw=true "Home screen dark theme")
+![Screenshot 2](/screenshot-2.png?raw=true "List of countries")
+![Screenshot 3](/screenshot-3.png?raw=true "Country details")
+![Screenshot 4](/screenshot-4.png?raw=true "Modal")
