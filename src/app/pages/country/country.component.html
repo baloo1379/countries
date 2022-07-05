@@ -1,4 +1,4 @@
-<div class="my-3 px-3 px-md-0" *ngIf="(country$ | async) as country">
+<div class="my-3 px-3 px-md-0">
   <nav aria-label="Breadcrumb" class="f2 my-2">
     <ol>
       <li class="breadcrumb-item">
@@ -8,11 +8,11 @@
         <a routerLink="/region/{{regionName}}">{{ regionName | titlecase }}</a>
       </li>
       <li class="breadcrumb-item breadcrumb-item-selected">
-        <a routerLink="." aria-current="page">{{ country.name.common }}</a>
+        <a routerLink="." aria-current="page">{{ (country$ | async) ?.name?.common }}</a>
       </li>
     </ol>
   </nav>
-  <div class="Box">
+  <div class="Box" *ngIf="(country$ | async) as country; else loading">
     <div class="Box-header d-flex flex-justify-between flex-items-center">
       <div>
         <h1 class="Box-title h1">
@@ -37,4 +37,8 @@
       Population: <strong>{{ country.population.toLocaleString() }}</strong>
     </div>
   </div>
+  <ng-template #loading>
+    <h2 class="text-center"><span>Loading</span><span class="AnimatedEllipsis"></span></h2>
+  </ng-template>
 </div>
+

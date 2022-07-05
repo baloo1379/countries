@@ -9,11 +9,14 @@
       </li>
     </ol>
   </nav>
-  <div class="List">
-    <a class="Box color-shadow-small p-5" *ngFor="let country of region$ | async" routerLink="./country/{{country.cca3}}">
+  <div class="List" *ngIf="(region$ | async) as region; else loading">
+    <a class="Box color-shadow-small p-5" *ngFor="let country of region" routerLink="./country/{{country.cca3}}">
       <span class="h3">{{ country.name.common }}</span>
       <img src="{{ country.flags.png }}" alt="{{ country.name.common }} flag">
     </a>
   </div>
+  <ng-template #loading>
+    <h2 class="text-center"><span>Loading</span><span class="AnimatedEllipsis"></span></h2>
+  </ng-template>
 </div>
 
