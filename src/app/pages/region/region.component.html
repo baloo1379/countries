@@ -10,9 +10,9 @@
     </ol>
   </nav>
   <div class="List">
-    <a class="Box color-shadow-small p-4" *ngFor="let country of region$ | async" routerLink="./country/{{country.cca3}}">
-      <img src="{{ country.flags.png }}" alt="{{ country.name.common }} flag" style="height: 48px;" class="mr-4 color-shadow-medium">
+    <a class="Box color-shadow-small p-5" *ngFor="let country of region$ | async" routerLink="./country/{{country.cca3}}">
       <span class="h3">{{ country.name.common }}</span>
+      <img src="{{ country.flags.png }}" alt="{{ country.name.common }} flag">
     </a>
   </div>
 </div>
