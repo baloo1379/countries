@@ -1,7 +1,7 @@
 import { Region, RegionPath } from './../models/region.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AsyncSubject, map, Observable, of, Subject, takeUntil, tap } from 'rxjs';
+import { map, Observable, of, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

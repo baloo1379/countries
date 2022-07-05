@@ -1,5 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'
@@ -29,7 +29,7 @@ import { BackButtonDirective } from './directives/back-button.directive'
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA // WebComponents
